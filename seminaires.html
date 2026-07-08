@@ -289,10 +289,11 @@ html:not(.unlocked){overflow:hidden}
 
 .nav-in{position:relative}
 .nav-item{position:relative}
+.nav-item::after{content:"";position:absolute;left:0;right:0;top:100%;height:18px}
 .nav-top{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
 .nav-top i{font-style:normal;font-size:.8em;opacity:.85}
 .nav-item:hover .nav-top{color:#fff}
-.nav-drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;min-width:230px;border-radius:5px;box-shadow:0 24px 46px -20px rgba(60,30,15,.45);padding:8px;display:none;flex-direction:column;z-index:60}
+.nav-drop{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#fff;min-width:230px;border-radius:5px;box-shadow:0 24px 46px -20px rgba(60,30,15,.45);padding:8px;display:none;flex-direction:column;z-index:60}
 .nav-drop::before{content:"";position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);width:12px;height:12px;background:#fff}
 .nav-drop a{color:var(--ink)!important;padding:11px 14px;border-radius:3px;font-size:.82rem;letter-spacing:.02em;text-transform:none}
 .nav-drop a:hover{background:var(--surface-2);color:var(--gold)!important}
@@ -308,6 +309,7 @@ html:not(.unlocked){overflow:hidden}
   .nav-top{width:100%;padding:11px 0}
   .nav-drop{position:static;transform:none;display:flex;background:transparent;box-shadow:none;padding:0 0 8px 16px;min-width:0}
   .nav-drop::before{display:none}
+  .nav-item::after{display:none}
   .nav-drop a{color:#f4d9cf!important}
   .nav-drop a.hl{color:#fff!important;font-weight:700}
   .nav-drop a:hover{background:transparent;color:#fff!important}
